@@ -21,7 +21,7 @@ jobs:
         ref: ${{ github.event.issue.pull_request.head.sha }} 
     
     - name: Checkout Pull Request
-      run: hub pr checkout ${{ github.event.issue.number }}
+      run: gh pr checkout ${{ github.event.issue.number }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         
