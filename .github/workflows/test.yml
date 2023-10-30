@@ -1,4 +1,4 @@
-name: 'Netlify'
+name: 'Netlify Manual'
 
 on: [workflow_dispatch]
 
@@ -16,10 +16,6 @@ jobs:
         node-version: [14.x]
 
     steps:
-    - name: Has secrets?
-      if: env.NETLIFY_AUTH_TOKEN == '' || env.NETLIFY_SITE_ID == ''
-      run: exit 1
-
     - uses: vishnudxb/cancel-workflow@v1.2
       if: failure()
       with:
