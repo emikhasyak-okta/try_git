@@ -26,6 +26,9 @@ jobs:
     - name: Checkout repository!
       uses: actions/checkout@v3
 
+    - name: test message
+      run: echo hello!
+
     - name: Setup node - ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
